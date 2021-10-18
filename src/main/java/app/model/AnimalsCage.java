@@ -9,8 +9,15 @@ public class AnimalsCage {
 
 
     @Autowired
+    @Qualifier("dog")
     private Animal animal;
+
+    @Autowired
     private Timer timer;
+
+    public Timer getTimer() {
+        return timer;
+    }
 
     @Autowired
     public AnimalsCage(@Qualifier("cat") Animal animal, Timer timer) {
@@ -18,9 +25,6 @@ public class AnimalsCage {
         this.timer = timer;
     }
 
-    public Timer getTimer() {
-        return timer;
-    }
 
     public void whatAnimalSay() {
         System.out.println("Say:");
