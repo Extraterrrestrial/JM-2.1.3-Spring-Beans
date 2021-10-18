@@ -10,6 +10,7 @@ public class AnimalsCage {
 
     @Autowired
     @Qualifier("dog")
+//    @Qualifier("cat")
     private Animal animal;
 
     @Autowired
